@@ -29,7 +29,7 @@ void write_to_file(Task obj){
 int main()
 {
 	Task t;
-	t.set_name ("kekom");
-	t.set_state ("lolff");
+	t.set_name ("name");
+	t.set_state ("state");
 	write_to_file (t);
 }
