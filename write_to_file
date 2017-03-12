@@ -1,0 +1,35 @@
+/*ostream& operator << (const char* file, Task obj)
+{
+	ofstream f; //here is exception
+	f.open(file, ios::app);
+	f << obj.get_name ();
+	f << ",";
+	f << obj.get_state ();
+	f <<"\n";
+	return f;
+}
+*/
+void write_to_file(Task obj){
+    ofstream file("data1.txt", ios::app);
+    if (file) 
+	{
+		file << obj.get_name ();
+		file << ",";
+		file << obj.get_state ();
+		file <<"\n";
+	}
+	else
+	{
+		cout << "File not found!" << endl;
+	}
+	//file.close();
+}
+
+
+int main()
+{
+	Task t;
+	t.set_name ("kekom");
+	t.set_state ("lolff");
+	write_to_file (t);
+}
