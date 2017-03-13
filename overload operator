@@ -1,0 +1,18 @@
+ostream& operator << (ostream& os, Task obj)
+{
+	os << obj.get_name ();
+	os << ",";
+	os << obj.get_state ();
+	os <<"\n";
+	return os;
+}
+
+int main()
+{
+	Task t;
+	t.set_name ("NaMe");
+	t.set_state ("StaTe");
+	ofstream file("data1.txt", ios::app);
+	file << t;
+		
+}
